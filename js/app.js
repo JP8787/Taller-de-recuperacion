@@ -75,15 +75,15 @@ const llenarResumenFicha = (codigo, cantidadAprendices, totalRegistros) => {
 
   resumenFicha.innerHTML = `
     <ul class="resumen-lista">
-      <li class="resumen-lista__item">
+      <li class="resumen-item">
         <span class="resumen-etiqueta">Ficha:</span>
         <span class="resumen-valor">${codigo}</span>
       </li>
-      <li class="resumen-lista__item">
+      <li class="resumen-item">
         <span class="resumen-etiqueta">Aprendices:</span>
         <span class="resumen-valor">${cantidadAprendices}</span>
       </li>
-      <li class="resumen-lista__item">
+      <li class="resumen-item">
         <span class="resumen-etiqueta">Registros:</span>
         <span class="resumen-valor">${totalRegistros}</span>
       </li>
@@ -97,7 +97,7 @@ const verificarSesion = () => {
   if (!usuario) {
     sessionStorage.setItem(
       loginMessageKey,
-      'Debes ingresar con usuario y contrasena antes de continuar.'
+      
     );
     window.location.replace('index.html');
     return false;

@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const contraseña = campocontraseña?.value?.trim() || '';
 
     if (!usuario) {
-      mostrarMensaje(mensaje, 'Ingresa tu nombre ');
+      mostrarMensaje(mensaje, 'Ingresa tu nombre.');
       campoUsuario?.focus();
       return;
     }
@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     localStorage.setItem(storageKey, usuario);
-    mostrarMensaje(mensaje, 'Ingreso exitoso');
+    mostrarMensaje(mensaje, 'Ingreso exitoso.');
     window.location.href = 'juiciosAprendicesFicha.html';
   });
 });
