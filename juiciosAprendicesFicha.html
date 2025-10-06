@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <title>Juicios Aprendices ADSO</title>
+    <link rel="stylesheet" href="css/app.css" />
+    <script type="module" src="js/app.js" defer></script>
+  </head>
+  <body class="contenedor">
+    <header class="encabezado">
+      <div class="encabezado__marca">
+        <img src="imagenes/logoSena.png" alt="Logo SENA" class="encabezado__logo" />
+        <div>
+          <h1>Juicios evaluativos ADSO</h1>
+          <p>Centro de teleinformatica y produccion industrial</p>
+        </div>
+      </div>
+      <div class="encabezado__usuario">
+        <span>Usuario:</span>
+        <strong id="nombreUsuario"></strong>
+        <button type="button" class="boton boton--secundario" id="btnSalir">
+          Salir
+        </button>
+      </div>
+    </header>
+
+    <main class="panel panel--principal">
+      <section class="panel panel--filtros">
+        <label>
+          <span>Selecciona una ficha</span>
+          <select id="selectFicha"></select>
+        </label>
+        <label>
+          <span>Selecciona un aprendiz</span>
+          <select id="selectAprendiz" disabled></select>
+        </label>
+        <label>
+          <span>Programa</span>
+          <span id="programa" class="resumen-valor"></span>
+        </label>
+      </section>
+
+      <section class="panel panel--estado">
+        <p class="feedback is-hidden" data-role="estado"></p>
+        <div class="resumen" data-role="resumen-ficha"></div>
+      </section>
+
+      <section class="panel panel--detalle" id="infoAprendiz">
+        <div class="aprendiz-resumen">
+          <h2 class="aprendiz-nombre" id="nombres"></h2>
+          <p class="aprendiz-detalle" id="apellidos"></p>
+          <p class="aprendiz-detalle">
+            Estado: <span id="estadoAprendiz"></span>
+          </p>
+        </div>
+        <div class="juicios-info">
+          <span>Juicios aprobados: <strong id="juiciosAprobados">0</strong></span>
+          <span>Juicios por evaluar: <strong id="juiciosPendientes">0</strong></span>
+        </div>
+        <table class="tabla-resultados">
+          <thead>
+            <tr>
+              <th>Competencia</th>
+              <th>Resultado de Aprendizaje</th>
+              <th>Juicio</th>
+              <th>Fecha</th>
+              <th>Instructor</th>
+            </tr>
+          </thead>
+          <tbody id="tablaResultados">
+            <tr>
+              <td colspan="5">Selecciona un aprendiz para ver el detalle.</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+    <div id="loader" class="loader" style="display: none;">
+      <div class="spinner"></div>
+      <p>Cargando informacion...</p>
+    </div>
+  </body>
+</html>

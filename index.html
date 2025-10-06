@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Juicios Evaluativos</title>
+    <link rel="stylesheet" href="css/app.css" />
+  </head>
+  <body class="pantalla pantalla--centrada">
+    <section class="tarjeta-ingreso">
+      <header>
+        <img src="imagenes/logoSena.png" alt="Logo SENA" />
+        <h1>Juicios Evaluativos ADSO</h1>
+        <p>Centro de teleinformatica y produccion industrial</p>
+      </header>
+      <form id="loginForm" class="formulario">
+        <label>
+          <span>usuario</span>
+          <input
+            id="usuario"
+            name="usuario"
+            type="text"
+            autocomplete="username"
+            placeholder="Escriba tu nombre"
+            required
+          />
+        </label>
+        <label>
+          <span>Contrasena</span>
+          <input
+            id="contrasena"
+            name="contrasena"
+            type="password"
+            autocomplete="current-password"
+            required
+          />
+        </label>
+        <button type="submit" class="boton">Ingresar</button>
+      </form>
+      <p id="mensajeLogin" class="feedback is-hidden"></p>
+    </section>
+    <script src="js/validarIngreso.js"></script>
+  </body>
+</html>
+
+
+

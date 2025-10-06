@@ -1,0 +1,236 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f5f5f5;
+  color: #222;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+.pantalla {
+  min-height: 100vh;
+  padding: 24px;
+}
+
+.pantalla--centrada {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tarjeta-ingreso {
+  width: 100%;
+  max-width: 360px;
+  background: #ffffff;
+  border: 1px solid #dcdcdc;
+  padding: 24px;
+  display: grid;
+  gap: 16px;
+}
+
+.tarjeta-ingreso > header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.tarjeta-ingreso > header img {
+  width: 60px;
+}
+
+.tarjeta-ingreso > header h1 {
+  font-size: 1.25rem;
+}
+
+.tarjeta-ingreso > header p {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.formulario {
+  display: grid;
+  gap: 12px;
+}
+
+.formulario label {
+  display: grid;
+  gap: 4px;
+  font-size: 0.9rem;
+}
+
+.formulario label input {
+  padding: 8px;
+  border: 1px solid #bbb;
+}
+
+.boton {
+  padding: 10px;
+  border: 1px solid #137547;
+  background: #137547;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.boton--secundario {
+  background: transparent;
+  color: #137547;
+}
+
+.feedback {
+  font-size: 0.85rem;
+  padding: 8px;
+  background: #f0f0f0;
+}
+
+.feedback.is-hidden {
+  display: none;
+}
+
+.contenedor {
+  padding: 16px;
+  display: grid;
+  gap: 16px;
+}
+
+.encabezado {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  background: #ffffff;
+  border: 1px solid #dcdcdc;
+}
+
+.encabezado__marca {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.encabezado__logo {
+  width: 60px;
+}
+
+.encabezado__usuario {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.panel {
+  background: #ffffff;
+  border: 1px solid #dcdcdc;
+  padding: 16px;
+  display: grid;
+  gap: 12px;
+}
+
+.panel--filtros {
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.panel--filtros label {
+  display: grid;
+  gap: 4px;
+  font-size: 0.9rem;
+}
+
+.panel--filtros select {
+  padding: 8px;
+  border: 1px solid #bbb;
+}
+
+.resumen-lista {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.resumen-lista__item {
+  padding: 6px 10px;
+  border: 1px solid #bbb;
+  font-size: 0.85rem;
+}
+
+.aprendiz-resumen {
+  border-bottom: 1px solid #dcdcdc;
+  padding-bottom: 12px;
+}
+
+.juicios-info {
+  display: flex;
+  gap: 16px;
+  font-size: 0.9rem;
+}
+
+.tabla-resultados {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tabla-resultados th,
+.tabla-resultados td {
+  border: 1px solid #dcdcdc;
+  padding: 8px;
+  font-size: 0.85rem;
+  text-align: left;
+}
+
+.loader {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.loader .spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid #137547;
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: spin 0.6s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 600px) {
+  .encabezado {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .juicios-info {
+    flex-direction: column;
+  }
+}
