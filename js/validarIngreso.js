@@ -19,7 +19,7 @@ const mostrarMensaje = (elemento, texto) => {
 document.addEventListener('DOMContentLoaded', () => {
   const formulario = document.getElementById('loginForm');
   const campoUsuario = document.getElementById('usuario');
-  const campoContrasena = document.getElementById('contrasena');
+  const campoContraseña = document.getElementById('contraseña');
   const mensaje = document.getElementById('mensajeLogin');
 
   const mensajePrevio = sessionStorage.getItem(loginMessageKey) || '';
@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
     event.preventDefault();
 
     const usuario = campoUsuario?.value?.trim() || '';
-    const contrasena = campoContrasena?.value?.trim() || '';
+    const contraseña = campoContraseña?.value?.trim() || '';
 
     if (!usuario) {
       mostrarMensaje(mensaje, 'Ingresa tu nombre.');
@@ -40,9 +40,9 @@ document.addEventListener('DOMContentLoaded', () => {
       return;
     }
 
-    if (contrasena !== password) {
-      mostrarMensaje(mensaje, 'La contrase\u00f1a es incorrecta.');
-      campoContrasena?.focus();
+    if (contraseña !== password) {
+      mostrarMensaje(mensaje, 'La contraseña es incorrecta.');
+      campoContraseña?.focus();
       return;
     }
 
@@ -51,3 +51,5 @@ document.addEventListener('DOMContentLoaded', () => {
     window.location.href = 'juiciosAprendicesFicha.html';
   });
 });
+
+
