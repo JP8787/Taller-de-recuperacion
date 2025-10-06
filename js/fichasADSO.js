@@ -1,7 +1,6 @@
 const fichasUrl = 'https://raw.githubusercontent.com/CesarMCuellarCha/apis/refs/heads/main/JUICIOS_ADSO.json';
 
-const normalizarUrl = (url) =>
-  typeof url === 'string' ? url.replace('/refs/heads/', '/') : '';
+
 
 export async function obtenerFichas() {
   const respuesta = await fetch(fichasUrl);
