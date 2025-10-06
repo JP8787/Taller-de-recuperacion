@@ -19,7 +19,7 @@ const mostrarMensaje = (elemento, texto) => {
 document.addEventListener('DOMContentLoaded', () => {
   const formulario = document.getElementById('loginForm');
   const campoUsuario = document.getElementById('usuario');
-  const campocontraseña = document.getElementById('contraseña');
+  const campoContrasena = document.getElementById('contrasena');
   const mensaje = document.getElementById('mensajeLogin');
 
   const mensajePrevio = sessionStorage.getItem(loginMessageKey) || '';
@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
     event.preventDefault();
 
     const usuario = campoUsuario?.value?.trim() || '';
-    const contraseña = campocontraseña?.value?.trim() || '';
+    const contrasena = campoContrasena?.value?.trim() || '';
 
     if (!usuario) {
       mostrarMensaje(mensaje, 'Ingresa tu nombre.');
@@ -40,9 +40,9 @@ document.addEventListener('DOMContentLoaded', () => {
       return;
     }
 
-    if (contraseña !== password) {
-      mostrarMensaje(mensaje, 'La contraseña es incorrecta.');
-      campocontraseña?.focus();
+    if (contrasena !== password) {
+      mostrarMensaje(mensaje, 'La contrase\u00f1a es incorrecta.');
+      campoContrasena?.focus();
       return;
     }
 
